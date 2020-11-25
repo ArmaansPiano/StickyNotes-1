@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title>Sticky Notes</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link href="newcss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header><img class="img-responsive" src="to do list.jpg" alt="my task board" /></header>
+        <SCRIPT>
+            function password() {
+                var test = 1;
+                var pass = prompt('Please enter your password before continuing.','');
+                while(test < 3) {
+                    if(!pass)
+                    history.go(-1);
+                    if(pass.toLowerCase() === "password") {
+                        alert('Here are your notes.');
+                        window.open('index2.html');
+                        break;
+                    }
+                    test += 1;
+                    var pass = prompt('Password is wrong. Please try again.','Password');
+                }
+                if(pass.toLowerCase() != "password" && test === 3)
+                    history.go(-1);
+                    return" ";
+                }
+        </SCRIPT>
+        <CENTER>
+            <FORM>
+                <p align = "center">
+                    <button type="button" style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;margin-top:10%;margin-bottom:0%" onClick = "password()"> Enter protected value.</button>
+            </p>
+                </FORM>
+            </CENTER>
+    </body>
+</html>
